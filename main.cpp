@@ -24,12 +24,13 @@ int main()
          cout<<"What is the item?\n";
          cin>>item;
          numItems++;
-    }
     
-    if(numItems >= 5)
-    {
-        cout<<"You'll need a bigger list!\n";
-        numItems++;
+    
+        if(numItems > 5)
+        {   
+            cout<<"You'll need a bigger list!\n";
+            numItems++;
+        }
     }
 
   }while(input != 'Q' && input != 'q');
