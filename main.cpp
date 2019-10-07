@@ -26,11 +26,10 @@ int main()
          numItems++;
     }
     
-    while(numItems == 5)
+    if(numItems >= 5)
     {
         cout<<"\nYou'll need a bigger list!\n";
         numItems++;
-        input = 'Q';
     }
 
   }while(input != 'Q' && input != 'q');
