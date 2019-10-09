@@ -23,9 +23,12 @@ int main()
     {
          cout<<"What is the item?\n";
          cin>>item;
-         list[numItems] = item;
+         if(numItems<5)
+         {
+            list[numItems]=item;
+         }
          numItems++;
-         
+
         if(numItems > 5)
         {   
             cout<<"You'll need a bigger list!\n";
@@ -35,6 +38,7 @@ int main()
 
   }while(input != 'Q' && input != 'q');
 
+  cout<<"\n==ITEMS TO BUY==";
   cout<<"\n1 "<<list[0];
   cout<<"\n2 "<<list[1];
   cout<<"\n3 "<<list[2];
