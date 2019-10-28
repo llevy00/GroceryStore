@@ -1,11 +1,12 @@
 //Lois Levy
 #include<iostream>
 #include<string>
+#include<list>
 using namespace std;
 
 int main()
 {
-  string list[5]; //array of 5 strings
+  string list[6];
   int numItems = 0;
   char input;
   string item = "";
@@ -14,8 +15,12 @@ int main()
   {
     cout<<"\n==GROCERY LIST MANAGER==";
     cout<<"\nEnter your choice: ";
-    cout<<"\n (A)dd an item";
-    cout<<"\n (Q)uit";
+    cout<<"\n(A)dd an item";
+    cout<<"\n(Q)uit";
+    if(numItems != 0)
+    {
+        cout<<"\n(D)elete last item";
+    }
     cout<<"\nYour choice (A/Q): ";
     cin>>input;
 
@@ -34,6 +39,10 @@ int main()
             cout<<"You'll need a bigger list!\n";
             numItems++;
         }
+    }
+    if(input == 'D' || input == 'd')
+    {
+        list[numItems-1] = list[5];
     }
 
   }while(input != 'Q' && input != 'q');
