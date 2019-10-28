@@ -15,12 +15,12 @@ int main()
   {
     cout<<"\n==GROCERY LIST MANAGER==";
     cout<<"\nEnter your choice: ";
-    cout<<"\n(A)dd an item";
-    cout<<"\n(Q)uit";
+    cout<<"\n (A)dd an item";
     if(numItems != 0)
     {
-        cout<<"\n(D)elete last item";
+        cout<<"/n (D)elete last item";
     }
+    cout<<"\n (Q)uit";
     cout<<"\nYour choice (A/Q): ";
     cin>>input;
 
@@ -47,12 +47,18 @@ int main()
 
   }while(input != 'Q' && input != 'q');
 
-  cout<<"==ITEMS TO BUY==";
-  cout<<"\n1 "<<list[0];
-  cout<<"\n2 "<<list[1];
-  cout<<"\n3 "<<list[2];
-  cout<<"\n4 "<<list[3];
-  cout<<"\n5 "<<list[4]<<endl;
-
+  if(numItems != 0)
+  {        
+    cout<<"==ITEMS TO BUY==";
+    cout<<"\n1 "<<list[0];
+    cout<<"\n2 "<<list[1];
+    cout<<"\n3 "<<list[2];
+    cout<<"\n4 "<<list[3];
+    cout<<"\n5 "<<list[4]<<endl;
+  }
+  else
+  {
+    cout<<"\nNo items to buy!";
+  }
   return 0;
 }
