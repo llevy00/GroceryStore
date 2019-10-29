@@ -18,7 +18,7 @@ int main()
     cout<<"\n (A)dd an item";
     if(numItems != 0)
     {
-        cout<<"/n (D)elete last item";
+        cout<<"\n (D)elete last item";
     }
     cout<<"\n (Q)uit";
     cout<<"\nYour choice (A/Q): ";
@@ -43,6 +43,7 @@ int main()
     if(input == 'D' || input == 'd')
     {
         list[numItems-1] = list[5];
+        cout<<list[numItems-1]<<" was deleted from the list"; 
     }
 
   }while(input != 'Q' && input != 'q');
@@ -58,7 +59,7 @@ int main()
   }
   else
   {
-    cout<<"\nNo items to buy!";
+    cout<<"No items to buy\n!";
   }
   return 0;
 }
